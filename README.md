@@ -1,4 +1,4 @@
-# Prime Number Checker
+# Prime or Not
 
 A simple Python program that checks whether an integer is prime.
 
@@ -8,19 +8,17 @@ A simple Python program that checks whether an integer is prime.
 
 ## Run
 
-From this folder, run:
+From this directory, run:
 
 ```bash
 python prime.py
 ```
 
-Enter an integer when prompted. The program reports whether it is prime; values
-less than 2 are not prime. If the input is not an integer, it displays
-`Invalid input.`
+Enter an integer when prompted. The program reports whether it is prime. Integers less than 2 are not prime, and invalid input is handled with an error message.
 
-Example:
+## Example
 
 ```text
-Enter an integer: 29
-29 is prime.
+Enter a number: 17
+17 is prime.
 ```

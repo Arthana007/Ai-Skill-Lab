@@ -1,20 +1,24 @@
-def is_prime(number: int) -> bool:
-    if number < 2:
-        return False
+def main():
+    try:
+        number = int(input("Enter a number: "))
+    except ValueError:
+        print("Invalid input.")
+        return
 
-    for divisor in range(2, int(number**0.5) + 1):
+    is_prime = number >= 2
+    divisor = 2
+
+    while is_prime and divisor <= number // divisor:
         if number % divisor == 0:
-            return False
+            is_prime = False
+            break
+        divisor += 1
 
-    return True
-
-
-try:
-    number = int(input("Enter an integer: "))
-except ValueError:
-    print("Invalid input.")
-else:
-    if is_prime(number):
+    if is_prime:
         print(f"{number} is prime.")
     else:
         print(f"{number} is not prime.")
+
+
+if __name__ == "__main__":
+    main()
